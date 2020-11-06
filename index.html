@@ -7,6 +7,7 @@
     <title>小米商城</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="fonts/font_2184499_5l0cs3kx5xp/iconfont.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -14,12 +15,12 @@
         <!-- 头部 -->
         <header>
             <!-- 顶部广告图 -->
-            <div class="header_top"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a2a9e6db5e3c5374301827435d8595c6.jpg?w=5120&amp;h=240" alt=""></div>
+            <div class="header_top"><img src="img/top-img.jpg" alt=""></div>
             <!-- 头部导航1 -->
             <div class="site-topbar">
                 <!-- 导航1主体 -->
                 <div class="container">
-                    <div class="tobar-nav">
+                    <div class="topbar-nav">
                         <a href="#">小米商城</a>
                         <span class="sep">|</span>
                         <a href="#">MIUI</a>
@@ -40,7 +41,10 @@
                         <span class="sep">|</span>
                         <a href="#">协议规则</a>
                         <span class="sep">|</span>
-                        <a href="#">下载app</a>
+                        <a href="#">下载app
+                            <div class="appcode"><img src="https://i1.mifile.cn/f/i/17/appdownload/download.png?1"
+                                    alt="" width="90" height="90">小米商城app</div>
+                        </a>
                         <span class="sep">|</span>
                         <a href="#">智能生活</a>
                         <span class="sep">|</span>
@@ -51,8 +55,9 @@
                             <a href="#">购物车
                                 <span class="cart-num">(0)</span>
                             </a>
-                            <div class="cart-menu">购物车中没有商品，赶紧选购吧！</div>
+                            <div class="cart-menu"></div>
                         </div>
+
                         <!-- 登陆注册info -->
                         <div class="topbar-info">
                             <a href="#">登陆</a>
@@ -63,17 +68,126 @@
                         </div>
                     </div>
                 </div>
-                <!-- 导航2主体 -->
-                <div class="site-header">
-                    <div class="container">
-                        <div class="header-logo">
-                            <a href="#"><img src="https://s02.mifile.cn/assets/static/image/mi-logo.png" alt=""></a>
-                        </div>
+            </div>
+            <!-- 导航2主体 -->
+            <div class="site-header">
+                <div class="container">
+                    <div class="header-logo">
+                        <a href="#">
+                        </a>
+                    </div>
+                    <div class="doodle">
+                        <a href="#">
+                        </a>
+                    </div>
+                    <div class="header-nav">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">小米手机</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Redmi 红米</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">电视</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">笔记本</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">家电</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">路由器</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">智能硬件</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">服务</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">社区</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-search">
+                        <form action="">
+                            <input type="search" placeholder="Redmi 10X 5G">
+                            <input type="submit" name="" class="submit" value="">
+                            <i class="iconfont iconsousuo">
+                        </i>
+                        </form>
                     </div>
                 </div>
             </div>
+            <!-- 导航2下拉菜单 -->
+            <div class="header-floor2">
+
+            </div>
         </header>
+
+        <!-- 菜单及轮播图 -->
+        <div class="slide-menu">
+            <!-- 轮播图 -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/537e0430d5c1b77f0d5123d6bcfc25db.jpg?w=2452&h=920" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cf6ba4d372b80e939104cf369f14139a.jpg?thumb=1&w=1533&h=575&f=webp&q=90" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9ebff5f5c1f52f2dbdd611897adbefd4.jpg?thumb=1&w=1533&h=575&f=webp&q=90" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0ef4160c861b998239bce9adb82341e7.jpg?thumb=1&w=1533&h=575&f=webp&q=90" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fe25c546580ff179bf6e60fb54d7afd4.jpg?thumb=1&w=1533&h=575&f=webp&q=90" alt=""></a>
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <!-- 轮播图左侧菜单 -->
+            <div class="aside-menu">
+                <ul class="menu-floor1">
+                    <li>
+                        <a href="#">手机 电话卡</a><i class="iconfont iconarrow-right"></i></li>
+                    <li>
+                        <a href="#">电视 盒子</a><i class="iconfont iconarrow-right"></i></li>
+                    <li>
+                        <a href="#">笔记本 显示器</a><i class="iconfont iconarrow-right"></i></li>
+                    <li>
+                        <a href="#">家电 插线板</a><i class="iconfont iconarrow-right"></i></li>
+                    <li>
+                        <a href="#">出行 穿戴</a><i class="iconfont iconarrow-right"></i></li>
+                    <li>
+                        <a href="#">智能 路由器</a><i class="iconfont iconarrow-right"></i></li>
+                    <li>
+                        <a href="#">电源 配件</a><i class="iconfont iconarrow-right"></i></li>
+                    <li>
+                        <a href="#">健康 儿童</a><i class="iconfont iconarrow-right"></i></li>
+                    <li>
+                        <a href="#">耳机 音响</a><i class="iconfont iconarrow-right"></i></li>
+                    <li>
+                        <a href="#">生活 箱包</a><i class="iconfont iconarrow-right"></i></li>
+                </ul>
+                <!-- 二级菜单 -->
+                <ul class="menu-floor2">
+
+                </ul>
+            </div>
+        </div>
     </div>
+    <script src="js/jquery1.11.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
