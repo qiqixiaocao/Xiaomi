@@ -12,7 +12,7 @@ const rename = require("gulp-rename");
 const cleanCss = require("gulp-clean-css");
 //高版本转低版本
 const babel = require("gulp-babel");
-
+const sourcemaps = require("gulp-sourcemaps");
 //任务
 gulp.task("hello", done => {
     console.log("hello gulp");
@@ -75,13 +75,24 @@ gulp.task("copyImg", done => {
     gulp.src(["json/a.json", "xml/a.xml"]).pipe(gulp.dest("dist/data"));
     done();
 }) */
-
+//sass任务
+gulp.task("sass", done => {
+    gulp.src("sass/*.scss")
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            outputStyle: "compressed"
+        }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest("dist/css"))
+        .pipe(connect.reload());
+    done();
+});
 //build
-gulp.task("build", gulp.parallel("copyHtml", "copyHtml1", "copyCss", "copyJs", "copyFonts", "copyImg"));
+gulp.task("build", gulp.parallel("copyHtml", "copyHtml1", "copyCss", "copyJs", "copyFonts", "copyImg", "sass"));
 
 //监听
 gulp.task("watch", done => {
-    gulp.watch("{*.html,html/*.html,css/*.css,js/*.js,fonts/font_2184499_5l0cs3kx5xp/**,img/**}", gulp.parallel("copyHtml", "copyHtml1", "copyCss", "copyJs", "copyFonts", "copyImg"));
+    gulp.watch("{*.html,html/*.html,css/*.css,js/*.js,fonts/font_2184499_5l0cs3kx5xp/**,img/**,sass/*.scss}", gulp.series("copyHtml", "copyHtml1", "copyCss", "copyJs", "copyFonts", "copyImg", "sass"));
     done();
 });
 // gulp.task("watch", done => {
@@ -104,11 +115,7 @@ gulp.task("server", done => {
 
 gulp.task("default", gulp.series("server", "watch"));
 
-//sass任务
-gulp.task("sass", done => {
-    gulp.src("sass/*.scss").pipe(sass()).pipe(gulp.dest("dist/css"))
-    done();
-});
+
 //合并
 gulp.task("concat", done => {
     gulp.src(["js/a.js", "js/b.js"])
