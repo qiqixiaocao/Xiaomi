@@ -98,6 +98,17 @@ a {
     line-height: 40px;
 }
 
+#index_main .site-topbar .topbar-nav .appcode {
+    position: absolute;
+    display: none;
+    color: #333;
+    background: #fff;
+    font-size: 14px;
+    box-shadow: 0 1px 5px #aaa;
+    text-align: center;
+    z-index: 1;
+}
+
 #index_main .site-topbar a {
     display: inline-block;
     font-size: 12px;
@@ -107,6 +118,10 @@ a {
 
 #index_main .site-topbar a:hover {
     color: #fff;
+}
+
+#index_main .site-topbar a:hover .appcode {
+    display: block;
 }
 
 #index_main .site-topbar .sep {
@@ -168,11 +183,29 @@ a {
 #index_main .site-header {
     width: 100%;
     height: 100px;
+    position: relative;
 }
 
 #index_main .site-header .container {
     width: 1200px;
     height: 100px;
     margin: 0 auto;
+}
+
+#index_main .site-header .header-logo {
+    float: left;
+    width: 55px;
+    margin-top: 22px;
     background: #ff6700;
+}
+
+#index_main .site-header .header-logo a {
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: url(https://s02.mifile.cn/assets/static/image/mi-logo.png) no-repeat 50% 50%;
+}
+
+#index_main .site-header .header-logo a:hover {
+    background: url(https://s02.mifile.cn/assets/static/image/mi-home.png) no-repeat 50% 50%;
 }
