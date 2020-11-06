@@ -1,0 +1,164 @@
+body,
+ul,
+dl,
+dt,
+dd,
+p,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+img,
+table,
+figure,
+figcaption,
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 100;
+}
+
+input,
+a {
+    outline: none;
+}
+
+
+/* 头部header */
+
+#index_main header {
+    width: 100%;
+}
+
+
+/* 顶部广告图 */
+
+#index_main .header_top {
+    height: 120px;
+}
+
+#index_main .header_top img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 头部导航1 */
+
+#index_main .site-topbar {
+    width: 100%;
+    height: 40px;
+    background: #333;
+}
+
+
+/* 导航1主体 */
+
+#index_main .site-topbar .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#index_main .site-topbar .topbar-nav {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+
+#index_main .site-topbar a {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 40px;
+    color: #b0b0b0;
+}
+
+#index_main .site-topbar a:hover {
+    color: #fff;
+}
+
+#index_main .site-topbar .sep {
+    margin: 0 3px;
+    color: #424242;
+}
+
+
+/* 购物车 */
+
+#index_main .topbar-cart {
+    width: 120px;
+    height: 40px;
+    float: right;
+    background: #424242;
+    text-align: center;
+    line-height: 40px;
+    color: #b0b0b0;
+    font-size: 12px;
+}
+
+#index_main .topbar-cart:hover {
+    background: #fff;
+    color: #ff6700;
+}
+
+#index_main .topbar-cart:hover a {
+    color: #ff6700;
+}
+
+#index_main .topbar-cart:hover .cart-menu {
+    display: block;
+    background: #fff;
+}
+
+#index_main .cart-menu {
+    width: 316px;
+    height: 100px;
+    background: #000;
+    position: relative;
+    left: -197px;
+    z-index: 1;
+    display: none;
+    color: #000;
+    border: 1px solid #000;
+    border-top: 0;
+}
+
+
+/* 登陆注册info */
+
+#index_main .topbar-info {
+    float: right;
+    margin-right: 20px;
+}
