@@ -284,6 +284,7 @@ a {
 
 #index_main .slide-menu {
     position: relative;
+    margin-bottom: 30px;
 }
 
 .swiper-container {
@@ -317,7 +318,7 @@ a {
     width: 234px;
     height: 440px;
     top: 0;
-    left: 168px;
+    left: 160px;
     background: rgba(105, 101, 101, .6);
     padding-top: 20px;
     z-index: 5;
@@ -354,4 +355,180 @@ a {
     height: 460px;
     background: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+}
+
+
+/* 常用链接 */
+
+#index_main .home-hero {
+    width: 1200px;
+    height: 170px;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+
+#index_main .home-channel-list {
+    float: left;
+    width: 228px;
+    height: 164px;
+    padding: 3px;
+    list-style-type: none;
+    font-size: 12px;
+    text-align: center;
+    background: #5f5750;
+}
+
+#index_main .home-channel-list li {
+    position: relative;
+    float: left;
+    width: 76px;
+    height: 82px;
+}
+
+#index_main .home-channel-list a {
+    display: block;
+    padding-top: 18px;
+    text-overflow: ellipsis;
+    color: #fff;
+    opacity: .7;
+}
+
+#index_main .home-channel-list img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 4px;
+}
+
+#index_main .home-channel-list li:after,
+#index_main .home-channel-list li:before {
+    position: absolute;
+    content: "";
+    background: #665e57;
+}
+
+#index_main .home-channel-list li:before {
+    top: -1px;
+    left: 6px;
+    width: 64px;
+    height: 1px;
+}
+
+#index_main .home-channel-list li:after {
+    top: 6px;
+    left: 0;
+    width: 1px;
+    height: 70px;
+}
+
+#index_main .home-channel-list li:hover a {
+    opacity: 1;
+}
+
+
+/* 图片集 */
+
+#index_main .home-hero .home-hero-imgs {
+    float: left;
+    height: 170px;
+    margin-left: 6px;
+}
+
+#index_main .home-hero .home-hero-imgs li {
+    float: left;
+}
+
+#index_main .home-hero .home-hero-imgs li img {
+    width: 316px;
+    height: 170px;
+}
+
+#index_main .home-hero .home-hero-imgs li:nth-child(1),
+#index_main .home-hero .home-hero-imgs li:nth-child(2) {
+    margin-right: 6px;
+}
+
+#index_main .home-hero .home-hero-imgs li:hover img {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .18);
+}
+
+
+/* 主页主体 */
+
+#index_main .page-main {
+    width: 100%;
+    background: #f5f5f5;
+    padding-top: 4px;
+    padding-bottom: 12px;
+    overflow: hidden;
+}
+
+#index_main .page-main .container {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+/* 小米闪购 */
+
+#index_main .flash-mi h2 {
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color: #333;
+}
+
+
+/* 倒计时 */
+
+#index_main .shutdown {
+    width: 234px;
+    height: 300px;
+    padding-top: 39px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    background: #f1eded;
+    text-align: center;
+    border-top-color: #e53935;
+}
+
+#index_main .shutdown .round {
+    font-size: 21px;
+    color: #ef3a3b;
+    padding-top: 15px;
+}
+
+#index_main .shutdown img {
+    margin: 25px auto;
+}
+
+#index_main .desc {
+    color: rgba(0, 0, 0, .54);
+    font-size: 15px;
+}
+
+#index_main .shutdown-time {
+    width: 168px;
+    margin: 28px auto 0;
+}
+
+#index_main .shutdown-time span {
+    float: left;
+    width: 46px;
+    height: 46px;
+    background: #605751;
+    color: #fff;
+    font-size: 24px;
+    line-height: 46px;
+}
+
+#index_main .shutdown-time i {
+    width: 15px;
+    float: left;
+    height: 46px;
+    line-height: 46px;
+    color: #605751;
+    font-size: 28px;
+    font-style: normal;
 }

@@ -3,6 +3,7 @@ var swiper = new Swiper('.swiper-container', {
     effect: 'fade',
     loop: true,
     spaceBetween: 30,
+    mousewheel: true,
     centeredSlides: true,
     autoplay: {
         delay: 2500,
@@ -18,18 +19,26 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
+swiper.el.onmouseover = function() {
+    swiper.autoplay.stop();
+};
+//鼠标离开开始自动切换
+swiper.el.onmouseout = function() {
+    swiper.autoplay.start();
+};
+
 //app下载
 $(function() {
     $(".topbar-nav a").eq(10).hover(
         function() {
             $(".appcode").stop().animate({
                 height: "130px"
-            }, 400);
+            }, 200);
         },
         function() {
             $(".appcode").stop().animate({
                 height: "0"
-            }, 400);
+            }, 200);
         }
     )
 });
@@ -40,12 +49,12 @@ $(function() {
         function() {
             $(".cart-menu").stop().animate({
                 height: "100px"
-            }, 400);
+            }, 200);
         },
         function() {
             $(".cart-menu").stop().animate({
                 height: "0"
-            }, 400);
+            }, 200);
         }
     )
 });
@@ -56,12 +65,12 @@ $(function() {
         function() {
             $(".header-floor2").stop().animate({
                 height: "230px"
-            }, 400);
+            }, 200);
         },
         function() {
             $(".header-floor2").stop().animate({
                 height: "0"
-            }, 400);
+            }, 200);
         }
     )
 });
@@ -72,12 +81,12 @@ $(function() {
         function() {
             $(".menu-floor2").stop().animate({
                 width: "966px"
-            }, 400);
+            }, 200);
         },
         function() {
             $(".menu-floor2").stop().animate({
                 width: "0"
-            }, 400);
+            }, 200);
         }
     )
 });
