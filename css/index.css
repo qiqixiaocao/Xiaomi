@@ -287,7 +287,7 @@ a {
     margin-bottom: 30px;
 }
 
-.swiper-container {
+#swiper1 {
     width: 1200px;
     height: 460px;
     margin: 0 auto;
@@ -296,16 +296,16 @@ a {
     --swiper-theme-color: #999;
 }
 
-.swiper-container img {
+#swiper1 img {
     width: 100%;
     height: 100%;
 }
 
-.swiper-pagination {
+#swiper1 .swiper-pagination {
     margin-left: 520px;
 }
 
-.swiper-button-prev {
+#swiper1 .swiper-button-prev {
     margin-left: 230px;
     cursor: pointer;
 }
@@ -464,6 +464,7 @@ a {
 }
 
 #index_main .page-main .container {
+    position: relative;
     width: 1200px;
     margin: 0 auto;
     overflow: hidden;
@@ -472,11 +473,61 @@ a {
 
 /* 小米闪购 */
 
-#index_main .flash-mi h2 {
+#index_main .box-hd {
+    position: relative;
+}
+
+#index_main .box-hd h2 {
     font-size: 22px;
     font-weight: 200;
     line-height: 58px;
     color: #333;
+}
+
+#index_main .box-hd .link {
+    position: absolute;
+    top: 20px;
+    font-size: 16px;
+    color: #424242;
+}
+
+#index_main .box-hd .link1 {
+    right: 0;
+}
+
+#index_main .box-hd .iconarrow-right {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #b0b0b0;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+#index_main .box-hd .link1:hover {
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    color: #ff6700;
+    border: 0;
+}
+
+#index_main .box-hd .link:hover .iconarrow-right {
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background: #ff6700;
+}
+
+#index_main .row {
+    width: 1200px;
+    margin: 0 auto;
 }
 
 
@@ -532,3 +583,271 @@ a {
     font-size: 28px;
     font-style: normal;
 }
+
+
+/* 小米闪购右侧轮播 */
+
+#swiper2 {
+    position: absolute;
+    top: 57px;
+    right: 0;
+    width: 952px;
+    height: 340px;
+    --swiper-theme-color: #999;
+    --swiper-navigation-size: 16px;
+    --swiper-theme-color: #999;
+}
+
+#index_main .container .pic {
+    width: 160px;
+    height: 160px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#index_main .container .title {
+    margin: 0 20px 3px;
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    color: #212121;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#index_main .container .desc {
+    height: 18px;
+    margin: 0 20px 12px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    color: #b0b0b0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#index_main .container .price {
+    margin: 0;
+    color: #ff6709;
+    font-size: 14px;
+}
+
+#index_main .container .price del {
+    color: #b0b0b0;
+    margin-left: 3px;
+}
+
+#swiper2 .swiper-slide {
+    width: 234px;
+    height: 339px;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #e53935;
+    ;
+}
+
+
+/* 广告横图K30S */
+
+#index_main .home-banner-box {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+
+/* 手机商品列表 */
+
+#index_main .aside-pic {
+    float: left;
+    width: 234px;
+    height: 614px;
+    margin-right: 14px;
+}
+
+
+/* 商品列表 */
+
+#index_main .pro-list {
+    width: 952px;
+    height: 614px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+#index_main .pro-list li {
+    width: 220px;
+    height: 300px;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#index_main .pro-list li:hover,
+#index_main .aside-pic img:hover {
+    z-index: 2;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    transform: translate3d(0, -2px, 0);
+}
+
+#index_main .pro-list .content .pic {
+    margin-left: 30px;
+    margin-top: 14px;
+}
+
+
+/* 家电商品列表 */
+
+#index_main .pro-list-tv {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#index_main .pro-list-tv .box-hd .tab-list {
+    float: right;
+}
+
+#index_main .tab-list li {
+    float: left;
+}
+
+#index_main .box-hd .link2 {
+    right: 100px;
+}
+
+#index_main .box-hd .link3 {
+    right: 0;
+}
+
+#index_main .box-hd .link2:hover {
+    border-bottom: 3px solid #ff6700;
+    color: #ff6700;
+}
+
+#index_main .box-hd .link3:hover {
+    border-bottom: 3px solid #ff6700;
+    color: #ff6700;
+}
+
+#index_main .pro-list-tv-ul {
+    width: 220px;
+    height: 300px;
+}
+
+#index_main .pro-list-tv .aside-item1 img {
+    margin-bottom: 14px;
+}
+
+#index_main .pro-list .pro-list-item1 {
+    width: 220px;
+    height: 143px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+#index_main .pro-list .pro-list-item1 .pic {
+    float: right;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+#index_main .pro-list .pro-list-item1 {
+    margin-bottom: 14px;
+}
+
+#index_main .title1 {
+    text-align: left;
+}
+
+#index_main .price1 {
+    text-align: left;
+    margin-left: -10px;
+}
+
+#index_main .title2 {
+    font-size: 18px;
+    color: #333;
+    margin-left: -70px;
+    margin-top: 20px;
+}
+
+#index_main .desc1 {
+    margin-left: -45px;
+    font-size: 12px;
+    color: #757575;
+}
+
+#index_main .icondirection-right {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 36px;
+    font-weight: 900;
+    color: #ff6700;
+    text-align: center;
+    line-height: 48px;
+    margin-left: 110px;
+    margin-top: -50px;
+    border: 5px solid #ff6700;
+}
+
+
+/* 智能商品列表 */
+
+#index_main .link4 {
+    right: 140px;
+}
+
+#index_main .link5 {
+    right: 70px;
+}
+
+#index_main .link6 {
+    right: 0;
+}
+
+#index_main .box-hd .link4:hover {
+    border-bottom: 3px solid #ff6700;
+    color: #ff6700;
+}
+
+#index_main .box-hd .link5:hover {
+    border-bottom: 3px solid #ff6700;
+    color: #ff6700;
+}
+
+#index_main .box-hd .link6:hover {
+    border-bottom: 3px solid #ff6700;
+    color: #ff6700;
+}
+
+
+/* 热门商品列表 */
+
+#index_main .link7 {
+    right: 120px;
+}
+
+#index_main .box-hd .link7:hover {
+    border-bottom: 3px solid #ff6700;
+    color: #ff6700;
+}
+
+
+/* 视频列表 */

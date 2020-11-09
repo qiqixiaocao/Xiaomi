@@ -1,5 +1,5 @@
-// 轮播图
-var swiper = new Swiper('.swiper-container', {
+// banner轮播图1
+var swiper1 = new Swiper('#swiper1', {
     effect: 'fade',
     loop: true,
     spaceBetween: 30,
@@ -19,12 +19,33 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
-swiper.el.onmouseover = function() {
-    swiper.autoplay.stop();
+var swiper2 = new Swiper('#swiper2', {
+    slidesPerView: 4,
+    spaceBetween: 14,
+    slidesPerGroup: 4,
+    // mousewheel: true,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+swiper1.el.onmouseover = function() {
+    swiper1.autoplay.stop();
 };
 //鼠标离开开始自动切换
-swiper.el.onmouseout = function() {
-    swiper.autoplay.start();
+swiper1.el.onmouseout = function() {
+    swiper1.autoplay.start();
 };
 
 //app下载

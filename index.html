@@ -132,7 +132,7 @@
         <!-- 菜单及轮播图 -->
         <div class="slide-menu">
             <!-- 轮播图 -->
-            <div class="swiper-container">
+            <div class="swiper-container" id="swiper1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <a href="#"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/537e0430d5c1b77f0d5123d6bcfc25db.jpg?w=2452&h=920" alt=""></a>
@@ -225,31 +225,654 @@
         <div class="page-main">
             <div class="container">
                 <!-- 小米闪购 -->
-                <div class="flash-mi">
+                <div class="box-hd">
                     <h2>小米闪购</h2>
                 </div>
-                <!-- 倒计时 -->
-                <div class="shutdown">
-                    <div class="round">00:00 场</div>
-                    <img src="data:img/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAA1CAYAAAAklDnhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ&#10;bWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp&#10;bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6&#10;eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1&#10;MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo&#10;dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw&#10;dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv&#10;IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS&#10;ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD&#10;cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5j&#10;ZUlEPSJ4bXAuaWlkOjY4Q0ZFMkY5MTJFNzExRThCMkM4OEM1RTNBNjczQUVBIiB4bXBNTTpEb2N1&#10;bWVudElEPSJ4bXAuZGlkOjY4Q0ZFMkZBMTJFNzExRThCMkM4OEM1RTNBNjczQUVBIj4gPHhtcE1N&#10;OkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjhDRkUyRjcxMkU3MTFFOEIy&#10;Qzg4QzVFM0E2NzNBRUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjhDRkUyRjgxMkU3MTFF&#10;OEIyQzg4QzVFM0E2NzNBRUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94Onht&#10;cG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5oEyacAAACoklEQVR42sSYv0tbURTHX0LqD6T4g4pE&#10;cHDoUOloBxVd/QFFEcQqWtrSKlKFmmAslopohzgIbv4FwUEE0clFujiIi+BSIbRQ0ooKRReRULHf&#10;S48Qgu++c3/FAx+iyU3eJzf3nnPuC/1qavQ04zVY8szjCHRGNN9cBD6DSkOJKzAGzsOaH/AW1FuY&#10;jRg4EH/oiJSCTxYk1sDK7T86Iu9BraHED/Au9wlVkYdg2lAiC/rBhYnIB/DIUOQj2M9/UkWkCsQN&#10;JbbA8l0vqIhMgXIDiZ/gFbgxEakBEwYSf8Eg+OM3gCsyA8oMRETy25UN4IjUgVEDiW2wGDSIIzIL&#10;ijUljsFLv3WhIvKYFphOXNO6OOUMDhKZA7qFcQF85Q6WXeQpeKEpcULlvY8xthp8iwR8I93qLLb7&#10;KnOsSPWNfhd6Bro99yHqTi9IhyWzEXIsIXbSG7Djt1jbQHsBZkMkyZRs13wpgIRoiJKy7dsBWh1L&#10;bN5Vt3JFQrQ2XMYeGKBk5yvSI7aRQ4k0eA4uZZlVPM47lDgTZxd6lKb4AcqkLuKSZiIdVGsiVFNc&#10;xDV9yT1Orekjoe+MDw4pHqwmaJewit66Ql0QaX+DOTaZe4DitAFZxQaaEynKnJ6KCDeaQAtj3A7V&#10;kBtXIpwT3iFV06zqquaKPKEtKIsM6Mo/StoWiQeMvSCJjO4+54hEwTCjuTk0STgckUm6QxTY3LgU&#10;Kc+/jyFrblyKCIkKbnPjSkT8HDGV5saVyBAtVHZz40Ik7HNTRtrcuBARF2tQbW5ciCR0mhvbIs2E&#10;cnNjWySh29zYFGnIK25KzY1Nkdziptzc2BKJUu7Qbm5sicQom2o3NzZEKqiu/DZpbmyIjIAHNBMZ&#10;7x4iTALjhcgVQSIl3v87w5vePcY/AQYAFYR6skFSqBUAAAAASUVORK5CYII="
-                        alt="小米闪购">
-                    <div class="desc">距离结束还有</div>
-                    <div class="shutdown-time">
-                        <span>00</span>
-                        <i>:</i>
-                        <span>00</span>
-                        <i>:</i>
-                        <span>00</span>
+                <div class="row">
+                    <!-- 倒计时 -->
+                    <div class="shutdown">
+                        <div class="round">00:00 场</div>
+                        <img src="data:img/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAA1CAYAAAAklDnhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ&#10;bWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp&#10;bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6&#10;eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1&#10;MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo&#10;dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw&#10;dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAv&#10;IiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RS&#10;ZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpD&#10;cmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5j&#10;ZUlEPSJ4bXAuaWlkOjY4Q0ZFMkY5MTJFNzExRThCMkM4OEM1RTNBNjczQUVBIiB4bXBNTTpEb2N1&#10;bWVudElEPSJ4bXAuZGlkOjY4Q0ZFMkZBMTJFNzExRThCMkM4OEM1RTNBNjczQUVBIj4gPHhtcE1N&#10;OkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjhDRkUyRjcxMkU3MTFFOEIy&#10;Qzg4QzVFM0E2NzNBRUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjhDRkUyRjgxMkU3MTFF&#10;OEIyQzg4QzVFM0E2NzNBRUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94Onht&#10;cG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5oEyacAAACoklEQVR42sSYv0tbURTHX0LqD6T4g4pE&#10;cHDoUOloBxVd/QFFEcQqWtrSKlKFmmAslopohzgIbv4FwUEE0clFujiIi+BSIbRQ0ooKRReRULHf&#10;S48Qgu++c3/FAx+iyU3eJzf3nnPuC/1qavQ04zVY8szjCHRGNN9cBD6DSkOJKzAGzsOaH/AW1FuY&#10;jRg4EH/oiJSCTxYk1sDK7T86Iu9BraHED/Au9wlVkYdg2lAiC/rBhYnIB/DIUOQj2M9/UkWkCsQN&#10;JbbA8l0vqIhMgXIDiZ/gFbgxEakBEwYSf8Eg+OM3gCsyA8oMRETy25UN4IjUgVEDiW2wGDSIIzIL&#10;ijUljsFLv3WhIvKYFphOXNO6OOUMDhKZA7qFcQF85Q6WXeQpeKEpcULlvY8xthp8iwR8I93qLLb7&#10;KnOsSPWNfhd6Bro99yHqTi9IhyWzEXIsIXbSG7Djt1jbQHsBZkMkyZRs13wpgIRoiJKy7dsBWh1L&#10;bN5Vt3JFQrQ2XMYeGKBk5yvSI7aRQ4k0eA4uZZlVPM47lDgTZxd6lKb4AcqkLuKSZiIdVGsiVFNc&#10;xDV9yT1Orekjoe+MDw4pHqwmaJewit66Ql0QaX+DOTaZe4DitAFZxQaaEynKnJ6KCDeaQAtj3A7V&#10;kBtXIpwT3iFV06zqquaKPKEtKIsM6Mo/StoWiQeMvSCJjO4+54hEwTCjuTk0STgckUm6QxTY3LgU&#10;Kc+/jyFrblyKCIkKbnPjSkT8HDGV5saVyBAtVHZz40Ik7HNTRtrcuBARF2tQbW5ciCR0mhvbIs2E&#10;cnNjWySh29zYFGnIK25KzY1Nkdziptzc2BKJUu7Qbm5sicQom2o3NzZEKqiu/DZpbmyIjIAHNBMZ&#10;7x4iTALjhcgVQSIl3v87w5vePcY/AQYAFYR6skFSqBUAAAAASUVORK5CYII="
+                            alt="小米闪购">
+                        <div class="desc">距离结束还有</div>
+                        <div class="shutdown-time">
+                            <span>00</span>
+                            <i>:</i>
+                            <span>00</span>
+                            <i>:</i>
+                            <span>00</span>
+                        </div>
+                        <!-- 小米闪购右侧轮播 -->
+                        <div class="swiper-container" id="swiper2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3f9dd493c0ded83d46a60c962af1b44b.png?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                            <h3 class="title">米家扫地机器人</h3>
+                                            <p class="desc">智商高，扫得干净扫得快</p>
+                                            <p class="price"><span>1399元</span><del>1699元</del></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3f9dd493c0ded83d46a60c962af1b44b.png?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                            <h3 class="title">米家扫地机器人</h3>
+                                            <p class="desc">智商高，扫得干净扫得快</p>
+                                            <p class="price"><span>1399元</span><del>1699元</del></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3f9dd493c0ded83d46a60c962af1b44b.png?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                            <h3 class="title">米家扫地机器人</h3>
+                                            <p class="desc">智商高，扫得干净扫得快</p>
+                                            <p class="price"><span>1399元</span><del>1699元</del></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3f9dd493c0ded83d46a60c962af1b44b.png?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                            <h3 class="title">米家扫地机器人</h3>
+                                            <p class="desc">智商高，扫得干净扫得快</p>
+                                            <p class="price"><span>1399元</span><del>1699元</del></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 如果需要导航按钮 -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
                     </div>
-                    <!-- 右侧轮播 -->
-                    <div></div>
+                </div>
+                <!-- 广告横图K30S -->
+                <div class="home-banner-box">
+                    <a href="#"><img alt="test" width="1226" height="120" data-src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99b88a8a39fbbd55177aea30e640557.jpg?thumb=1&amp;w=1533&amp;h=150&amp;f=webp&amp;q=90" src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99b88a8a39fbbd55177aea30e640557.jpg?thumb=1&amp;w=1533&amp;h=150&amp;f=webp&amp;q=90"
+                            lazy="loaded"></a>
+                </div>
+                <!-- 手机商品列表 -->
+                <div class="box-hd">
+                    <h2>手机</h2>
+                    <a href="#" class="link link1">查看全部<span class="iconfont iconarrow-right"></span></a>
+                </div>
+                <div class="row">
+                    <a href="#" class="aside-pic"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/574c6643ab91c6618bfb2d0e2c761d0b.jpg?thumb=1&w=293&h=768&f=webp&q=90" alt="" width="234" height="614"></a>
+                    <ul class="pro-list">
+                        <li>
+                            <a href="#">
+                                <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d880ff45a9a3b70527770e01521fc939.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                    <h3 class="title">小米10至尊版</h3>
+                                    <p class="desc">120X 变焦/120W秒充/120Hz屏幕</p>
+                                    <p class="price"><span>5299元起</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d880ff45a9a3b70527770e01521fc939.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                    <h3 class="title">小米10至尊版</h3>
+                                    <p class="desc">120X 变焦/120W秒充/120Hz屏幕</p>
+                                    <p class="price"><span>5299元起</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d880ff45a9a3b70527770e01521fc939.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                    <h3 class="title">小米10至尊版</h3>
+                                    <p class="desc">120X 变焦/120W秒充/120Hz屏幕</p>
+                                    <p class="price"><span>5299元起</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d880ff45a9a3b70527770e01521fc939.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                    <h3 class="title">小米10至尊版</h3>
+                                    <p class="desc">120X 变焦/120W秒充/120Hz屏幕</p>
+                                    <p class="price"><span>5299元起</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d880ff45a9a3b70527770e01521fc939.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                    <h3 class="title">小米10至尊版</h3>
+                                    <p class="desc">120X 变焦/120W秒充/120Hz屏幕</p>
+                                    <p class="price"><span>5299元起</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d880ff45a9a3b70527770e01521fc939.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                    <h3 class="title">小米10至尊版</h3>
+                                    <p class="desc">120X 变焦/120W秒充/120Hz屏幕</p>
+                                    <p class="price"><span>5299元起</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d880ff45a9a3b70527770e01521fc939.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                    <h3 class="title">小米10至尊版</h3>
+                                    <p class="desc">120X 变焦/120W秒充/120Hz屏幕</p>
+                                    <p class="price"><span>5299元起</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d880ff45a9a3b70527770e01521fc939.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                    <h3 class="title">小米10至尊版</h3>
+                                    <p class="desc">120X 变焦/120W秒充/120Hz屏幕</p>
+                                    <p class="price"><span>5299元起</span></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 家电广告 -->
+                <div class="home-banner-box">
+                    <a href="#"><img alt="test" width="1226" height="120" data-src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99b88a8a39fbbd55177aea30e640557.jpg?thumb=1&amp;w=1533&amp;h=150&amp;f=webp&amp;q=90" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c3b86ede4dd31d7c126d56fbdde4f855.jpg?thumb=1&w=1533&h=150&f=webp&q=90"
+                            lazy="loaded"></a>
+                </div>
+                <!-- 家电商品列表 -->
+                <div class="pro-list-tv">
+                    <div class="box-hd">
+                        <h2>家电</h2>
+                        <a href="#" class="link link2">热门</a>
+                        <a href="#" class="link link3">电视影音</a>
+                    </div>
+                    <div class="row">
+                        <div class="aside-pic">
+                            <a href="#" class="aside-item1"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f256b81e4233333692eece77ed06ebc2.jpg?thumb=1&w=293&h=375&f=webp&q=90" width="234" height="300"></a>
+                            <a href="#" class="aside-item2"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/86567ac179a32fa9af05f89a45e57cbe.jpg?thumb=1&w=293&h=375&f=webp&q=90" width="234" height="300"></a>
+                        </div>
+                        <ul class="pro-list">
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ef4c68fed730ec26bf2fa0ff620975c5.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            Redmi 红米电视 70英寸
+                                        </h3>
+                                        <p class="desc">70英寸震撼巨屏，4K画质，细腻如真</p>
+                                        <p class="price"><span>3199元</span><del>3799元</del></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ef4c68fed730ec26bf2fa0ff620975c5.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            Redmi 红米电视 70英寸
+                                        </h3>
+                                        <p class="desc">70英寸震撼巨屏，4K画质，细腻如真</p>
+                                        <p class="price"><span>3199元</span><del>3799元</del></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ef4c68fed730ec26bf2fa0ff620975c5.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            Redmi 红米电视 70英寸
+                                        </h3>
+                                        <p class="desc">70英寸震撼巨屏，4K画质，细腻如真</p>
+                                        <p class="price"><span>3199元</span><del>3799元</del></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ef4c68fed730ec26bf2fa0ff620975c5.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            Redmi 红米电视 70英寸
+                                        </h3>
+                                        <p class="desc">70英寸震撼巨屏，4K画质，细腻如真</p>
+                                        <p class="price"><span>3199元</span><del>3799元</del></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ef4c68fed730ec26bf2fa0ff620975c5.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            Redmi 红米电视 70英寸
+                                        </h3>
+                                        <p class="desc">70英寸震撼巨屏，4K画质，细腻如真</p>
+                                        <p class="price"><span>3199元</span><del>3799元</del></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ef4c68fed730ec26bf2fa0ff620975c5.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            Redmi 红米电视 70英寸
+                                        </h3>
+                                        <p class="desc">70英寸震撼巨屏，4K画质，细腻如真</p>
+                                        <p class="price"><span>3199元</span><del>3799元</del></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ef4c68fed730ec26bf2fa0ff620975c5.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            Redmi 红米电视 70英寸
+                                        </h3>
+                                        <p class="desc">70英寸震撼巨屏，4K画质，细腻如真</p>
+                                        <p class="price"><span>3199元</span><del>3799元</del></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <ul class="pro-list-tv-ul">
+                                <li class="pro-list-item1">
+                                    <a href="#">
+                                        <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/74e573c4c0d89048392d14831cc507d5.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="" class="pic">
+                                            <h3 class="title title1">
+                                                Air 13.3" 2019<br>款
+                                            </h3>
+                                            <p class="price "><span class="price1">5499元起</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="pro-list-item1">
+                                    <a href="#">
+                                        <div class="content">
+                                            <h3 class=" title2">
+                                                浏览更多<br>
+                                                <p class="desc1">热门</p>
+                                            </h3>
+                                            <i class="iconfont icondirection-right"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 智能门锁广告 -->
+                <div class="home-banner-box">
+                    <a href="#"><img alt="test" width="1226" height="120" data-src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99b88a8a39fbbd55177aea30e640557.jpg?thumb=1&amp;w=1533&amp;h=150&amp;f=webp&amp;q=90" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/59e8fc8ba9718c266882719fb4bbcedd.jpg?thumb=1&w=1533&h=150&f=webp&q=90"
+                            lazy="loaded"></a>
+                </div>
+                <!-- 智能商品列表 -->
+                <div class="pro-list-tv">
+                    <div class="box-hd">
+                        <h2>智能</h2>
+                        <a href="#" class="link link4">热门</a>
+                        <a href="#" class="link link5">安防</a>
+                        <a href="#" class="link link6">出行</a>
+                    </div>
+                    <div class="row">
+                        <div class="aside-pic">
+                            <a href="#" class="aside-item1"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/45c23f5b9a927b2dc49c25277e07727c.jpg?thumb=1&w=293&h=375&f=webp&q=90" width="234" height="300"></a>
+                            <a href="#" class="aside-item2"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a660ce095e8f553a9ed1515265f4e9fc.jpg?thumb=1&w=293&h=375&f=webp&q=90" width="234" height="300"></a>
+                        </div>
+                        <ul class="pro-list">
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/011dd8493ad62f3793dbb63d9fbd3bc0.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米[小爱老师]
+                                        </h3>
+                                        <p class="desc">英语提分利器</p>
+                                        <p class="price"><span>999元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/011dd8493ad62f3793dbb63d9fbd3bc0.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米[小爱老师]
+                                        </h3>
+                                        <p class="desc">英语提分利器</p>
+                                        <p class="price"><span>999元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/011dd8493ad62f3793dbb63d9fbd3bc0.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米[小爱老师]
+                                        </h3>
+                                        <p class="desc">英语提分利器</p>
+                                        <p class="price"><span>999元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/011dd8493ad62f3793dbb63d9fbd3bc0.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米[小爱老师]
+                                        </h3>
+                                        <p class="desc">英语提分利器</p>
+                                        <p class="price"><span>999元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/011dd8493ad62f3793dbb63d9fbd3bc0.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米[小爱老师]
+                                        </h3>
+                                        <p class="desc">英语提分利器</p>
+                                        <p class="price"><span>999元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/011dd8493ad62f3793dbb63d9fbd3bc0.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米[小爱老师]
+                                        </h3>
+                                        <p class="desc">英语提分利器</p>
+                                        <p class="price"><span>999元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/011dd8493ad62f3793dbb63d9fbd3bc0.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米[小爱老师]
+                                        </h3>
+                                        <p class="desc">英语提分利器</p>
+                                        <p class="price"><span>999元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <ul class="pro-list-tv-ul">
+                                <li class="pro-list-item1">
+                                    <a href="#">
+                                        <div class="content"><img src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-miapp-a1/T1r_x_BgLT1RXrhCrK.jpg?thumb=1&w=125&h=125" alt="" class="pic">
+                                            <h3 class="title title1">
+                                                九号平衡车
+                                            </h3>
+                                            <p class="price "><span class="price1">1199元</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="pro-list-item1">
+                                    <a href="#">
+                                        <div class="content">
+                                            <h3 class=" title2">
+                                                浏览更多<br>
+                                                <p class="desc1">热门</p>
+                                            </h3>
+                                            <i class="iconfont icondirection-right"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 饮水机广告 -->
+                <div class="home-banner-box">
+                    <a href="#"><img alt="test" width="1226" height="120" data-src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99b88a8a39fbbd55177aea30e640557.jpg?thumb=1&amp;w=1533&amp;h=150&amp;f=webp&amp;q=90" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/100dbcf1bee16fe5cc76f6b7f006ee0d.jpg?thumb=1&w=1533&h=150&f=webp&q=90"
+                            lazy="loaded"></a>
+                </div>
+                <!-- 热门商品列表 -->
+                <div class="pro-list-tv">
+                    <div class="box-hd">
+                        <h2>热门</h2>
+                        <a href="#" class="link link7">热门</a>
+                        <a href="#" class="link link6">耳机音箱</a>
+                    </div>
+                    <div class="row">
+                        <div class="aside-pic">
+                            <a href="#" class="aside-item1"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6874615b3c50e837ffe532eb6ea4ef1a.jpg?thumb=1&w=293&h=375&f=webp&q=90" width="234" height="300"></a>
+                            <a href="#" class="aside-item2"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a00bdd568dbc2b02f8fe0fa8d1b46f28.jpg?thumb=1&w=293&h=375&f=webp&q=90" width="234" height="300"></a>
+                        </div>
+                        <ul class="pro-list">
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5fc35cf0af915a9e60f5d4ea220521ab.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米真无线蓝牙耳机Air 2 Pro
+                                        </h3>
+                                        <p class="desc">主动降噪/持久续航/无线充</p>
+                                        <p class="price"><span>649元<del>699元</del></span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5fc35cf0af915a9e60f5d4ea220521ab.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米真无线蓝牙耳机Air 2 Pro
+                                        </h3>
+                                        <p class="desc">主动降噪/持久续航/无线充</p>
+                                        <p class="price"><span>649元<del>699元</del></span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5fc35cf0af915a9e60f5d4ea220521ab.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米真无线蓝牙耳机Air 2 Pro
+                                        </h3>
+                                        <p class="desc">主动降噪/持久续航/无线充</p>
+                                        <p class="price"><span>649元<del>699元</del></span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5fc35cf0af915a9e60f5d4ea220521ab.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米真无线蓝牙耳机Air 2 Pro
+                                        </h3>
+                                        <p class="desc">主动降噪/持久续航/无线充</p>
+                                        <p class="price"><span>649元<del>699元</del></span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5fc35cf0af915a9e60f5d4ea220521ab.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米真无线蓝牙耳机Air 2 Pro
+                                        </h3>
+                                        <p class="desc">主动降噪/持久续航/无线充</p>
+                                        <p class="price"><span>649元<del>699元</del></span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5fc35cf0af915a9e60f5d4ea220521ab.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米真无线蓝牙耳机Air 2 Pro
+                                        </h3>
+                                        <p class="desc">主动降噪/持久续航/无线充</p>
+                                        <p class="price"><span>649元<del>699元</del></span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5fc35cf0af915a9e60f5d4ea220521ab.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            小米真无线蓝牙耳机Air 2 Pro
+                                        </h3>
+                                        <p class="desc">主动降噪/持久续航/无线充</p>
+                                        <p class="price"><span>649元<del>699元</del></span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <ul class="pro-list-tv-ul">
+                                <li class="pro-list-item1">
+                                    <a href="#">
+                                        <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9946e252a7c49662376c056ced004a20.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="" class="pic">
+                                            <h3 class="title title1">
+                                                小米小爱触屏<br>音响
+                                            </h3>
+                                            <p class="price "><span class="price1">189元</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="pro-list-item1">
+                                    <a href="#">
+                                        <div class="content">
+                                            <h3 class=" title2">
+                                                浏览更多<br>
+                                                <p class="desc1">热门</p>
+                                            </h3>
+                                            <i class="iconfont icondirection-right"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 周边广告 -->
+                <div class="home-banner-box">
+                    <a href="#"><img alt="test" width="1226" height="120" data-src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99b88a8a39fbbd55177aea30e640557.jpg?thumb=1&amp;w=1533&amp;h=150&amp;f=webp&amp;q=90" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9880db34d227b6c1df5b45cb7df4f465.jpg?thumb=1&w=1533&h=150&f=webp&q=90"
+                            lazy="loaded"></a>
+                </div>
+                <!-- 周边商品列表 -->
+                <div class="pro-list-tv">
+                    <div class="box-hd">
+                        <h2>周边</h2>
+                        <a href="#" class="link link5">热门</a>
+                        <a href="#" class="link link6">出行</a>
+                    </div>
+                    <div class="row">
+                        <div class="aside-pic">
+                            <a href="#" class="aside-item1"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ca0940f052227d235e7de5678d106c89.jpg?thumb=1&w=293&h=375&f=webp&q=90" width="234" height="300"></a>
+                            <a href="#" class="aside-item2"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/942985dc060f9274bdd1be4b02f1d7ef.jpg?thumb=1&w=293&h=375&f=webp&q=90" width="234" height="300"></a>
+                        </div>
+                        <ul class="pro-list">
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cccac948e1b8ffb47f1fecde67692e60.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            米家飞行员太阳镜Pro
+                                        </h3>
+                                        <p class="desc">尼龙偏光，轻巧佩戴</p>
+                                        <p class="price"><span>199元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cccac948e1b8ffb47f1fecde67692e60.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            米家飞行员太阳镜Pro
+                                        </h3>
+                                        <p class="desc">尼龙偏光，轻巧佩戴</p>
+                                        <p class="price"><span>199元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cccac948e1b8ffb47f1fecde67692e60.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            米家飞行员太阳镜Pro
+                                        </h3>
+                                        <p class="desc">尼龙偏光，轻巧佩戴</p>
+                                        <p class="price"><span>199元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cccac948e1b8ffb47f1fecde67692e60.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            米家飞行员太阳镜Pro
+                                        </h3>
+                                        <p class="desc">尼龙偏光，轻巧佩戴</p>
+                                        <p class="price"><span>199元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cccac948e1b8ffb47f1fecde67692e60.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            米家飞行员太阳镜Pro
+                                        </h3>
+                                        <p class="desc">尼龙偏光，轻巧佩戴</p>
+                                        <p class="price"><span>199元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cccac948e1b8ffb47f1fecde67692e60.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            米家飞行员太阳镜Pro
+                                        </h3>
+                                        <p class="desc">尼龙偏光，轻巧佩戴</p>
+                                        <p class="price"><span>199元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cccac948e1b8ffb47f1fecde67692e60.jpg?thumb=1&w=250&h=250&f=webp&q=90" alt="" class="pic">
+                                        <h3 class="title">
+                                            米家飞行员太阳镜Pro
+                                        </h3>
+                                        <p class="desc">尼龙偏光，轻巧佩戴</p>
+                                        <p class="price"><span>199元</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <ul class="pro-list-tv-ul">
+                                <li class="pro-list-item1">
+                                    <a href="#">
+                                        <div class="content"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c1062daf42a1a5b2a9108510ecf83d0b.jpg?thumb=1&w=125&h=125&f=webp&q=90" alt="" class="pic">
+                                            <h3 class="title title1">
+                                                MIJOY 唱片机<br>车载香薰
+                                            </h3>
+                                            <p class="price "><span class="price1">49元</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="pro-list-item1">
+                                    <a href="#">
+                                        <div class="content">
+                                            <h3 class=" title2">
+                                                浏览更多<br>
+                                                <p class="desc1">热门</p>
+                                            </h3>
+                                            <i class="iconfont icondirection-right"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 巨能写中性笔广告 -->
+                <div class="home-banner-box">
+                    <a href="#"><img alt="test" width="1226" height="120" data-src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99b88a8a39fbbd55177aea30e640557.jpg?thumb=1&amp;w=1533&amp;h=150&amp;f=webp&amp;q=90" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/88e35cffc82cd98cd53172460067af17.jpg?thumb=1&w=1533&h=150&f=webp&q=90"
+                            lazy="loaded"></a>
+                </div>
+                <!-- 视频列表 -->
+                <div class="box-hd">
+                    <h2>视频</h2>
+                    <a href="#" class="link link1">查看全部<span class="iconfont iconarrow-right"></span></a>
                 </div>
             </div>
-            <div>
-                <a href="#"><img alt="test" width="1226" height="120" data-src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99b88a8a39fbbd55177aea30e640557.jpg?thumb=1&amp;w=1533&amp;h=150&amp;f=webp&amp;q=90" src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/e99b88a8a39fbbd55177aea30e640557.jpg?thumb=1&amp;w=1533&amp;h=150&amp;f=webp&amp;q=90"
-                        lazy="loaded"></a>
-            </div>
         </div>
+    </div>
     </div>
     <script src="js/jquery1.11.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
