@@ -1,62 +1,3 @@
-body,
-ul,
-dl,
-dt,
-dd,
-p,
-ol,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-form,
-img,
-table,
-figure,
-figcaption,
-fieldset,
-legend {
-    margin: 0;
-    padding: 0;
-}
-
-ul,
-li,
-ol {
-    list-style: none;
-}
-
-img,
-fieldset {
-    border: 0;
-}
-
-img {
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 100;
-}
-
-input,
-a {
-    outline: none;
-}
-
-
 /* 头部header */
 
 #index_main header {
@@ -851,3 +792,306 @@ a {
 
 
 /* 视频列表 */
+
+#index_main .video-list {
+    width: 1200px;
+    height: 285px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#index_main .video-list li {
+    position: relative;
+    width: 296px;
+    height: 285px;
+}
+
+#index_main .video-list .title {
+    margin-top: 20px;
+}
+
+#index_main .video-list .desc {
+    margin-top: 5px;
+}
+
+#index_main .play {
+    position: absolute;
+    left: 22px;
+    top: 145px;
+    display: block;
+    width: 30px;
+    height: 18px;
+    border-radius: 12px;
+    border: 3px solid #fff;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#index_main .video-list li:hover .play {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background: #ff6700;
+    border-color: #ff6700;
+}
+
+
+/* 链接 */
+
+#index_main .site-footer {
+    width: 100%;
+}
+
+
+/* 服务支持 */
+
+#index_main .footer-service {
+    width: 1200px;
+    height: 80px;
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#index_main .footer-service li {
+    float: left;
+    width: 239px;
+    height: 25px;
+    border-right: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+#index_main .footer-service a {
+    font-size: 16px;
+    color: #616161;
+}
+
+#index_main .footer-service .iconfont {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+#index_main .footer-service li:hover a {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    color: #ff6700;
+}
+
+#index_main .footer-service li:last-child {
+    border: 0;
+}
+
+
+/* 底部链接 */
+
+.footer-links {
+    width: 1200px;
+    height: 250px;
+    padding: 40px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.footer-links dl {
+    float: left;
+    width: 160px;
+}
+
+.footer-links dt {
+    margin-bottom: 26px;
+    font-size: 14px;
+    color: #424242;
+}
+
+.footer-links dd {
+    font-size: 12px;
+    color: #757575;
+    margin-top: 10px;
+}
+
+.footer-links dd a:hover {
+    color: #ff6700;
+}
+
+.footer-links .contact {
+    float: right;
+    width: 237px;
+    height: 110px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+}
+
+.contact p {
+    margin: 0 0 5px 0;
+    font-size: 12px;
+}
+
+.contact .phone {
+    font-size: 22px;
+    line-height: 1;
+    color: #ff6700;
+}
+
+.person-contact {
+    display: inline-block;
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    color: #ff6700;
+    border: 1px solid #ff6700;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.follow {
+    position: relative;
+    font-size: 12px;
+}
+
+.weibo,
+.weixin {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+.follow .iconfont {
+    font-size: 24px;
+}
+
+.follow-weixin {
+    width: 120px;
+    height: 0;
+    position: absolute;
+    right: 20px;
+    z-index: 4;
+}
+
+.contact .person-contact:hover {
+    background: #ff6700;
+    color: #fff;
+}
+
+.contact .iconfont:hover {
+    color: #ff6700;
+}
+
+
+/* 版权信息及相关链接 */
+
+.site-info {
+    width: 100%;
+    padding: 30px 0;
+    font-size: 12px;
+    background: #fafafa;
+}
+
+.site-info .content {
+    position: relative;
+    width: 1200px;
+    height: 136px;
+    margin: 0 auto;
+}
+
+.site-info .content .logo {
+    width: 57px;
+    height: 57px;
+    margin-right: 10px;
+    background: url(https://s02.mifile.cn/assets/static/image/logo-footer.png) no-repeat 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.site-info .content .info-text {
+    padding-left: 67px;
+}
+
+.site-info .info-links {
+    height: 28px;
+    margin: 15px 0 15px;
+    padding-left: 67px;
+}
+
+.site-info .info-links a {
+    float: left;
+}
+
+.site-info .slogan {
+    clear: both;
+    margin: 30px auto 0;
+    width: 100%;
+    height: 19px;
+    background: url(https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/global/slogan2020.png) no-repeat center 0;
+    margin: 40px 0;
+}
+
+.site-info a:hover {
+    color: #ff6700;
+}
+
+
+/* 侧面固定导航 */
+
+.aside-nav {
+    position: fixed;
+    width: 84px;
+    bottom: 70px;
+    top: 100px;
+    right: 0;
+    z-index: 99;
+}
+
+.aside-nav li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 82px;
+    height: 90px;
+    margin-top: -1px;
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
+    text-align: center;
+}
+
+.aside-nav li i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.aside-nav li:hover i {
+    color: #ff6700;
+}
+
+.aside-nav li:hover a {
+    color: #ff6700;
+}
+
+.aside-nav li:last-child {
+    display: none;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+
+.aside-nav .follow-img {
+    position: absolute;
+    right: 100px;
+    top: 0;
+    padding: 14px;
+    background: #fff;
+    border: 1px solid #f5f5f5;
+    opacity: 0;
+}

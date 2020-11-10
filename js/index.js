@@ -3,7 +3,6 @@ var swiper1 = new Swiper('#swiper1', {
     effect: 'fade',
     loop: true,
     spaceBetween: 30,
-    mousewheel: true,
     centeredSlides: true,
     autoplay: {
         delay: 2500,
@@ -110,4 +109,55 @@ $(function() {
             }, 200);
         }
     )
+});
+
+//底部微信下拉
+$(function() {
+    $(".weixin").hover(
+        function() {
+            $(".follow-weixin").stop().animate({
+                height: "120px"
+            }, 200);
+        },
+        function() {
+            $(".follow-weixin").stop().animate({
+                height: "0"
+            }, 200);
+        }
+    )
+});
+
+// 侧面导航下拉
+$(function() {
+    $(".follow-li").hover(
+        function() {
+            $(".follow-img").stop().animate({
+                opacity: "1"
+            }, 200);
+        },
+        function() {
+            $(".follow-img").stop().animate({
+                opacity: "0"
+            }, 200);
+        }
+    )
+});
+//返回顶部
+$(function() {
+    var flag = true;
+    $(window).scroll(function() {
+        if (flag) {
+            var st = $(this).scrollTop();
+            if (st >= 500) {
+                $(".aside-nav li:last").fadeIn();
+            } else {
+                $(".aside-nav li:last").fadeOut();
+            }
+        }
+    })
+    $(".aside-nav li:last").click(function() {
+        $("html,body").animate({
+            "scrollTop": 0
+        }, 500);
+    })
 });
