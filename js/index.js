@@ -161,3 +161,125 @@ $(function() {
         }, 500);
     })
 });
+
+// $.get("http://localhost:3000/productlist").then(data => {
+//     console.log(data);
+//     console.log(data[0].price);
+//     console.log(data[0].title);
+//     console.log(data[0].imgUrl);
+//     console.log(data[0].id);
+// })
+
+$.get("http://localhost:3000/productlist").then(data => {
+
+    //小米闪购右侧轮播数据动态传递
+    // let str = "";
+    // for (let i = 0; i < 4; i++) {
+    //     let j = Math.floor(Math.random() * 100 + 1);
+    //     for (let i = 0; i < 8; i++) {
+    //         str += `
+    //     <div class="swiper-slide">
+    //         <a href="#">
+    //             <div class="content">
+    //                 <img src="${data[j].imgUrl}" alt="" class="pic">
+    //                 <h3 class="title">${data[j].title}</h3>
+    //                 <p class="desc">${data[j].title}</p>
+    //                 <p class="price"><span>${data[j].price}元</span><del>${data[j].price}元</del></p>
+    //             </div>
+    //          </a>
+    //     </div>
+    //     `
+    //     }
+    //     $("#swiper2 .swiper-wrapper").html(str);
+    //}
+
+    //手机商品列表数据动态传递
+    let str1 = "";
+    for (let i = 0; i < 8; i++) {
+        let j = Math.floor(Math.random() * 100 + 1);
+        str1 += `
+        <li data-id="${data[j].id}">
+        <a href="html/detail.html?id=${data[j].id}" target="_blank">
+            <div class="content"><img src="${data[j].imgUrl}" alt="" class="pic">
+                <h3 class="title">${data[j].title}</h3>
+                <p class="desc">${data[j].title}</p>
+                <p class="price"><span>${data[j].price}元起</span></p>
+            </div>
+        </a>
+    </li>
+    `
+    }
+    $("#pro-list-1").html(str1);
+
+    //家电商品列表数据动态传递
+    let str2 = "";
+    for (let i = 0; i < 8; i++) {
+        let j = Math.floor(Math.random() * 100 + 1);
+        str2 += `
+        <li data-id="${data[j].id}">
+        <a href="html/detail.html?id=${data[j].id}" target="_blank">
+            <div class="content"><img src="${data[j].imgUrl}" alt="" class="pic">
+                <h3 class="title">${data[j].title}</h3>
+                <p class="desc">${data[j].title}</p>
+                <p class="price"><span>${data[j].price}元起</span></p>
+            </div>
+        </a>
+    </li>
+    `
+    }
+    $("#pro-list-2").html(str2);
+
+    // 智能商品列表数据动态传递
+    let str3 = "";
+    for (let i = 0; i < 8; i++) {
+        let j = Math.floor(Math.random() * 100 + 1);
+        str3 += `
+        <li data-id="${data[j].id}">
+        <a href="html/detail.html?id=${data[j].id}" target="_blank">
+            <div class="content"><img src="${data[j].imgUrl}" alt="" class="pic">
+                <h3 class="title">${data[j].title}</h3>
+                <p class="desc">${data[j].title}</p>
+                <p class="price"><span>${data[j].price}元起</span></p>
+            </div>
+        </a>
+    </li>
+    `
+    }
+    $("#pro-list-3").html(str3);
+
+    //热门商品列表数据动态传递
+    let str4 = "";
+    for (let i = 0; i < 8; i++) {
+        let j = Math.floor(Math.random() * 100 + 1);
+        str4 += `
+        <li data-id="${data[j].id}">
+        <a href="html/detail.html?id=${data[j].id}" target="_blank">
+            <div class="content"><img src="${data[j].imgUrl}" alt="" class="pic">
+                <h3 class="title">${data[j].title}</h3>
+                <p class="desc">${data[j].title}</p>
+                <p class="price"><span>${data[j].price}元起</span></p>
+            </div>
+        </a>
+    </li>
+    `
+    }
+    $("#pro-list-4").html(str4);
+
+    //周边商品列表数据动态传递
+    let str5 = "";
+    for (let i = 0; i < 8; i++) {
+        let j = Math.floor(Math.random() * 100 + 1);
+        str5 += `
+        <li data-id="${data[j].id}">
+        <a href="html/detail.html?id="${data[j].id}" target="_blank">
+            <div class="content"><img src="${data[j].imgUrl}" alt="" class="pic">
+                <h3 class="title">${data[j].title}</h3>
+                <p class="desc">${data[j].title}</p>
+                <p class="price"><span>${data[j].price}元起</span></p>
+            </div>
+        </a>
+    </li>
+    `
+    }
+    $("#pro-list-5").html(str5);
+})

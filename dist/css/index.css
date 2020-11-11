@@ -544,10 +544,12 @@
     height: 160px;
     margin: 0;
     margin-bottom: 20px;
+    margin-left: 40px;
 }
 
 #index_main .container .title {
     margin: 0 20px 3px;
+    width: 200px;
     font-size: 14px;
     font-weight: 400;
     text-overflow: ellipsis;
@@ -557,6 +559,7 @@
 }
 
 #index_main .container .desc {
+    width: 200px;
     height: 18px;
     margin: 0 20px 12px;
     font-size: 12px;
