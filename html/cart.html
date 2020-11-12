@@ -7,7 +7,19 @@
     <title>购物车</title>
     <style>
         img {
-            width: 30px;
+            width: 60px;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .minus,
+        .plus,
+        .del {
+            cursor: pointer;
+            margin: 0 5px;
+            font-size: 18px;
         }
     </style>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -19,10 +31,13 @@
 
     </ul>
     <div id="totalPrice">
-        0
+
     </div>
     <script src="../js/jquery1.11.js"></script>
     <script src="../js/cart.js"></script>
+    <script>
+        document.onselectstart = new Function("event.returnValue=false;"); //阻止选中
+    </script>
 </body>
 
 </html>

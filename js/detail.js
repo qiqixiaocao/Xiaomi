@@ -32,7 +32,6 @@ $.get(`http://localhost:3000/productlist?id=${id}`).then(data => {
         $("input").eq(0).val(num);
     })
     $("#btn").click(function() {
-        console.log(id);
         if (username) {
             axios.get("http://localhost:3000/cart", {
                 params: {
@@ -48,7 +47,8 @@ $.get(`http://localhost:3000/productlist?id=${id}`).then(data => {
                         price: $("p").text(),
                         num: $("input").eq(0).val()
                     });
-                    window.location.href = `../html/cart.html?id=${id}`;
+                    alert("添加成功!");
+                    window.location.href = "../index.html";
                 } else {
                     axios.get("http://localhost:3000/cart", {
                         params: {
@@ -61,7 +61,8 @@ $.get(`http://localhost:3000/productlist?id=${id}`).then(data => {
                         axios.patch(`http://localhost:3000/cart/${id}`, {
                             num: num
                         });
-                        window.location.href = `../html/cart.html?id=${id}`;
+                        alert("添加成功!");
+                        window.location.href = "../index.html";
                     })
                 }
             })
