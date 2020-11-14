@@ -30,6 +30,7 @@ $("#btn").click(function() {
             if (data.code == 0) {
                 $(".login-message").text("用户名已存在");
             } else if (data.code == 1) {
+                alert("注册成功！");
                 window.location.href = "../html/login.html";
                 localStorage.setItem("username", JSON.stringify($(".username").val()));
             }

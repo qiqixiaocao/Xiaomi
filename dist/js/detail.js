@@ -4,32 +4,46 @@ let username = localStorage.getItem("username");
 $.get(`http://localhost:3000/productlist?id=${id}`).then(data => {
     let str = "";
     str += `
-    <h3>${data[0].title}</h3>
-    <img src="${data[0].imgUrl}" alt="">
-    <p>${data[0].price}元</p>
-    <span>-</span><input type="text" value="1"><span>+</span>
-    <input type="button" value="加入购物车" id="btn">
+    <div class="detail-main">
+        <img src="${data[0].imgUrl}" alt="" id="imgUrl">
+        <div class="detail-message">
+            <h3 id="title">${data[0].title}</h3>
+            <p id="price">${data[0].price}元</p>
+            <div class="choose-num">
+                <span id="jian">-</span><input type="text" value="1" id="num"><span id="jia">+</span>
+            </div>
+            <input type="button" value="加入购物车" id="btn">
+        </div>
+    </div>
+    `
+    let str1 = ""
+    str1 += `
+    <div class="container">
+        <h2>${data[0].title}</h2>
+        <span>用户评价</span>
+    </div>
     `
     $("#detail").html(str);
-    $("span").eq(0).click(function() {
-        let num = $("input").eq(0).val();
+    $("#detail-title").html(str1);
+    $("#jian").click(function() {
+        let num = $("#num").val();
         num--;
         if (num < 1) {
             num = 1;
         }
-        $("input").eq(0).val(num);
+        $("#num").val(num);
     })
-    $("span").eq(1).click(function() {
-        let num = $("input").eq(0).val();
+    $("#jia").click(function() {
+        let num = $("#num").val();
         num++;
-        $("input").eq(0).val(num);
+        $("#num").val(num);
     })
-    $("input").eq(0).change(function() {
-        let num = $("input").eq(0).val();
+    $("#num").change(function() {
+        let num = $("#num").val();
         if (num < 1) {
             num = 1;
         }
-        $("input").eq(0).val(num);
+        $("#num").val(num);
     })
     $("#btn").click(function() {
         if (username) {
@@ -38,34 +52,37 @@ $.get(`http://localhost:3000/productlist?id=${id}`).then(data => {
                     id: id
                 }
             }).then(data => {
-                console.log()
-                if (data.data.length == 0) {
-                    axios.post("http://localhost:3000/cart", {
-                        id: id,
-                        imgUrl: $("img").attr("src"),
-                        title: $("h3").text(),
-                        price: $("p").text(),
-                        num: $("input").eq(0).val()
-                    });
-                    alert("添加成功!");
-                    window.location.href = "../index.html";
-                } else {
-                    axios.get("http://localhost:3000/cart", {
-                        params: {
-                            username: username,
-                            id: id
-                        }
-                    }).then(gai => {
-                        let num = Math.floor(gai.data[0].num);
-                        num += Math.floor($("input").eq(0).val())
-                        axios.patch(`http://localhost:3000/cart/${id}`, {
-                            num: num
+                if (window.confirm("确定要添加吗？")) {
+                    if (data.data.length == 0) {
+                        axios.post("http://localhost:3000/cart", {
+                            id: id,
+                            imgUrl: $("#imgUrl").attr("src"),
+                            title: $("#title").text(),
+                            price: $("#price").text(),
+                            num: $("#num").val()
                         });
                         alert("添加成功!");
-                        window.location.href = "../index.html";
-                    })
+                        window.location.href = "../html/cart.html";
+                    } else {
+                        axios.get("http://localhost:3000/cart", {
+                            params: {
+                                username: username,
+                                id: id
+                            }
+                        }).then(gai => {
+                            let num = Math.floor(gai.data[0].num);
+                            num += Math.floor($("#num").val());
+                            axios.patch(`http://localhost:3000/cart/${id}`, {
+                                num: num
+                            });
+                            alert("添加成功!");
+                            window.location.href = "../html/cart.html";
+                        })
+                    }
+                } else {
+                    return false;
                 }
-            })
+            });
         } else {
             alert("请先登录！");
             window.location.href = "../html/login.html";
